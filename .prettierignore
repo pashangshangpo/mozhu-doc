@@ -1,0 +1,10 @@
+*.min.*
+*.json
+
+README.md
+
+/build
+/config
+/node_modules
+/static
+/index.html
