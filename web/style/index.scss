@@ -1,0 +1,13 @@
+$bg-color: rgb(236, 236, 236);
+$main-color: white;
+$pagebg-color: rgb(240, 242, 245);
+
+.content {
+  // padding: 30px 20px;
+  padding-top: 20px;
+  background-color: $bg-color;
+}
+
+.ant-layout-header {
+  background-color: $main-color;
+}

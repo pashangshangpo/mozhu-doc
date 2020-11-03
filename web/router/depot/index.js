@@ -1,6 +1,8 @@
 import React from 'react'
 import './index.scss'
+
 import { List, Avatar } from 'antd'
+
 import Konwscard from './../../components/Knowscard'
 
 const data = [

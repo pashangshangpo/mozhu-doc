@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+button {
+  margin: auto 15px;
+}
+
+.avatar {
+  align-content: center;
+  margin-left: 15px;
+}
