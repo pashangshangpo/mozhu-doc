@@ -61,9 +61,12 @@
     "webpack-merge": "^4.1.4"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.2.2",
     "antd": "^4.8.0",
     "axios": "^0.18.0",
+    "immutable": "^4.0.0-rc.12",
     "react": "^16.7.0",
+    "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.6.3",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0"

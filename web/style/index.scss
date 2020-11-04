@@ -4,7 +4,10 @@ $pagebg-color: rgb(240, 242, 245);
 
 .content {
   // padding: 30px 20px;
+  width: 980px;
+  min-width: 980px;
   padding-top: 20px;
+  margin: auto;
   background-color: $bg-color;
 }
 

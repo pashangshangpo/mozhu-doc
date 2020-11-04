@@ -1,8 +1,11 @@
-.header {
+.headercontent {
   display: flex;
+  width: 980px;
+  min-width: 980px;
   flex-flow: row;
   align-items: center;
   justify-content: flex-end;
+  margin: auto;
 }
 
 .logo {

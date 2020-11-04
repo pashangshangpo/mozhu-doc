@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Route from './Route'
+import { HashRouter } from 'react-router-dom'
 
 import './style/reset.scss'
 import './style/index.scss'
@@ -14,26 +15,28 @@ const { Content, Footer } = Layout
 class Main extends React.Component {
   render() {
     return (
-      <Layout>
-        <Headertop />
-        <Content
-          className='site-layout'
-          style={{ padding: '0 50px', marginTop: 64 }}
-        >
-          {/* <Breadcrumb style={{ margin: '16px 0' }}>
-            <Breadcrumb.Item>首页</Breadcrumb.Item>
-          </Breadcrumb> */}
-          <div
-            className='site-layout-background'
-            style={{ padding: 24, minHeight: 380 }}
+      <HashRouter>
+        <Layout>
+          <Headertop />
+          <Content
+            className='site-layout'
+            style={{ padding: '0 50px', marginTop: 64 }}
           >
-            <Route />
-          </div>
-        </Content>
-        <Footer style={{ textAlign: 'center' }}>
-          Ant Design ©2018 Created by Ant UED
-        </Footer>
-      </Layout>
+            {/* <Breadcrumb style={{ margin: '16px 0' }}>
+              <Breadcrumb.Item>首页</Breadcrumb.Item>
+            </Breadcrumb> */}
+            <div
+              className='site-layout-background'
+              style={{ padding: 24, minHeight: 380 }}
+            >
+              <Route />
+            </div>
+          </Content>
+          <Footer style={{ textAlign: 'center' }}>
+            Ant Design ©2018 Created by Ant UED
+          </Footer>
+        </Layout>
+      </HashRouter>
     )
   }
 }

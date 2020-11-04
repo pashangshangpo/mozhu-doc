@@ -7,10 +7,10 @@ import Konwscard from './../../components/Knowscard'
 
 const data = [
   {
-    title: 'Ant Design Title 1',
+    title: '专栏文章1',
   },
   {
-    title: 'Ant Design Title 2',
+    title: '专栏文章2',
   },
   {
     title: 'Ant Design Title 3',

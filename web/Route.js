@@ -11,8 +11,9 @@ class Routes extends React.Component {
       <HashRouter>
         <Switch>
           <Route exact={true} path='/' component={Home} />
-          <Route path='/depot' component={Depot} />
+          <Route exact={true} path='/home' component={Home} />
         </Switch>
+        <Route path='/depot' component={Depot} />
       </HashRouter>
     )
   }

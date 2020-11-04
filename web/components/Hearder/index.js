@@ -1,26 +1,54 @@
 import React from 'react'
 import { Layout, Button, Avatar, Image } from 'antd'
-
+import { Link } from 'react-router-dom'
+import Dialog from '../Dialog'
+import Child from '../Child'
 import './index.scss'
 
 const { Header } = Layout
 
 class Headertop extends React.Component {
+  constructor(props) {
+    super(props)
+    this.State = { date: new Date() }
+  }
+  myalert = () => {
+    Dialog.open({
+      childrens: [Child],
+      props: {
+        showValue: function() {
+          console.log('Dialog******')
+        },
+        close: function() {
+          Dialog.close()
+        },
+      },
+      closeDialog: function() {
+        console.log('closeDialog____')
+        //关闭弹窗
+      },
+    })
+  }
   render() {
     return (
       <Header
         className='header'
         style={{ position: 'fixed', zIndex: 1, width: '100%' }}
       >
-        <div className='logo'> 墨竹文档 </div>
-        <Button>创建文章</Button>
-        <Button>创建知识库</Button>
-        <Avatar
-          className='avatar'
-          src={
-            <Image src='https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png' />
-          }
-        />
+        <div className='headercontent'>
+          <div className='logo'>
+            {' '}
+            <Link to='/'>墨竹文档</Link>{' '}
+          </div>
+          <Button>创建文章</Button>
+          <Button onClick={this.myalert}>创建知识库</Button>
+          <Avatar
+            className='avatar'
+            src={
+              <Image src='https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png' />
+            }
+          />
+        </div>
       </Header>
     )
   }
