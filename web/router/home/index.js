@@ -6,8 +6,13 @@ import { renderShow } from '$common/util'
 import Dialog from '$components/Dialog'
 import Child from '$components/Child'
 import { parse } from 'postcss'
+import { Link } from 'react-router-dom'
 
-const data = []
+const data = [
+  {
+    title: '知识库1',
+  },
+]
 const cardlist = [
   {
     title: '知识库1',
@@ -61,7 +66,7 @@ export default () => {
                   avatar={
                     <Avatar src='https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png' />
                   }
-                  title={<a href='https://ant.design'>{item.title}</a>}
+                  title={<Link to={'/infoarticle'}>{item.title}</Link>}
                   description='Ant Design, a design language for background applications, is refined by Ant UED Team'
                 />
               </List.Item>

@@ -3,9 +3,14 @@ import { List, Avatar, Empty } from 'antd'
 import { renderShow } from '$common/util'
 import Konwscard from '$components/Knowscard'
 import './index.scss'
+import { Link } from 'react-router-dom'
 
 const groupdata = [{}]
-const DATA = []
+const DATA = [
+  {
+    title: '列表1',
+  },
+]
 
 export default () => {
   return (
@@ -35,7 +40,7 @@ export default () => {
                   avatar={
                     <Avatar src='https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png' />
                   }
-                  title={<a href='https://ant.design'>{item.title}</a>}
+                  title={<Link to='/infoarticle'>{item.title}</Link>}
                   description='Ant Design, a design language for background applications, is refined by Ant UED Team'
                 />
               </List.Item>

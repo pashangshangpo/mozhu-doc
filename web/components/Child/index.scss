@@ -1,10 +1,12 @@
+@import '$style/index.scss';
+
 .Child {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 500px;
   // height: 200px;
-  padding: 30px 15px;
+  padding: 30px 20px 30px 15px;
   background-color: white;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -24,7 +26,7 @@
     right: -15px;
     width: 30px;
     height: 30px;
-    color: white;
+    color: $logo;
     font-size: 30px;
   }
 }
