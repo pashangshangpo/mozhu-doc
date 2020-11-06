@@ -1,22 +1,45 @@
-.headercontent {
-  display: flex;
-  width: 980px;
-  min-width: 980px;
-  flex-flow: row;
-  align-items: center;
-  justify-content: flex-end;
-  margin: auto;
-}
+@import '$style/index.scss';
 
-.logo {
-  margin-right: auto;
-}
+.header {
+  border-bottom: 2px solid $border-color;
 
-button {
-  margin: auto 15px;
-}
+  a:link {
+    color: rgb(64, 160, 139);
+  }
 
-.avatar {
-  align-content: center;
-  margin-left: 15px;
+  a:visited {
+    color: rgb(64, 160, 139);
+  }
+
+  a:hover {
+    color: rgb(64, 160, 139);
+  }
+
+  a:active {
+    color: rgb(64, 160, 139);
+  }
+
+  .headercontent {
+    display: flex;
+    width: 980px;
+    min-width: 980px;
+    flex-flow: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin: auto;
+
+    .logo {
+      margin-right: auto;
+      font-size: 28px;
+    }
+
+    button {
+      margin: auto 15px;
+    }
+
+    .avatar {
+      align-content: center;
+      margin-left: 15px;
+    }
+  }
 }

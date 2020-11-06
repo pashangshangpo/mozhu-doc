@@ -5,10 +5,10 @@ import { CloseCircleOutlined } from '@ant-design/icons'
 
 const layout = {
   labelCol: { span: 5 },
-  wrapperCol: { span: 18 },
+  wrapperCol: { span: 24 },
 }
 const tailLayout = {
-  wrapperCol: { offset: 8, span: 12 },
+  wrapperCol: { offset: 0, span: 24 },
 }
 
 const onFinish = values => {
@@ -33,7 +33,11 @@ class Child extends Component {
   render() {
     return (
       <div className='Child'>
-        <CloseCircleOutlined className='closeicon' onClick={this.closeDiglog} />
+        <CloseCircleOutlined
+          className='closeicon'
+          twoToneColor='#ffffff'
+          onClick={this.closeDiglog}
+        />
         <div className='childcontent'>
           <Form
             {...layout}
@@ -53,23 +57,15 @@ class Child extends Component {
             </Form.Item>
 
             <Form.Item label='知识库描述' name='konws'>
-              <Input />
+              <Input.TextArea rows={10} />
             </Form.Item>
 
-            <Form.Item {...tailLayout}>
+            <Form.Item wrapperCol={{ offset: 10 }}>
               <Button type='primary' htmlType='submit'>
-                Submit
+                创建
               </Button>
             </Form.Item>
           </Form>
-          {/* <div className='title'>
-                <label className='label'>知识库标题</label>
-                <input defaultValue='没有标题'/>
-            </div>
-            <div className='childcontent'>
-                <label className='lable'>知识库标题</label>
-                <input defaultValue='请填写对知识库的描述'/>
-            </div> */}
           {/* <button onClick={this.showValue}>调用父的方法</button> */}
         </div>
       </div>

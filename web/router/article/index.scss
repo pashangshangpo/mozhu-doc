@@ -1,0 +1,42 @@
+@import '$style/index.scss';
+
+.content.article {
+  margin-top: -20px !important;
+
+  .from {
+    margin-top: -20px;
+
+    .ant-row.ant-form-item {
+      margin-bottom: 0;
+    }
+
+    input.ant-input-lg {
+      color: $font-darkgray;
+      font-size: 24px;
+      line-height: 42px;
+    }
+
+    .textarea {
+      .ant-input {
+        padding: 40px 40px 80px !important;
+      }
+    }
+
+    .ant-input {
+      padding: 0 80px 10px 40px !important;
+    }
+  }
+
+  .selectbar {
+    display: flex;
+    height: 40px;
+    background-color: $logo;
+    line-height: 40px;
+    vertical-align: middle;
+
+    .ant-row.ant-form-item {
+      margin-bottom: 0;
+      line-height: 40px;
+    }
+  }
+}

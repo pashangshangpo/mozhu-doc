@@ -1,65 +1,48 @@
 import React from 'react'
+import { List, Avatar, Empty } from 'antd'
+import { renderShow } from '$common/util'
+import Konwscard from '$components/Knowscard'
 import './index.scss'
 
-import { List, Avatar } from 'antd'
-
-import Konwscard from './../../components/Knowscard'
-
-const data = [
-  {
-    title: '专栏文章1',
-  },
-  {
-    title: '专栏文章2',
-  },
-  {
-    title: 'Ant Design Title 3',
-  },
-  {
-    title: 'Ant Design Title 4',
-  },
-  {
-    title: 'Ant Design Title 1',
-  },
-  {
-    title: 'Ant Design Title 2',
-  },
-  {
-    title: 'Ant Design Title 3',
-  },
-  {
-    title: 'Ant Design Title 4',
-  },
-  {
-    title: 'Ant Design Title 3',
-  },
-  {
-    title: 'Ant Design Title 4',
-  },
-]
+const groupdata = [{}]
+const DATA = []
 
 export default () => {
   return (
     <div className='content'>
       <div className='cardlist'>
-        <Konwscard></Konwscard>
+        {renderShow(
+          groupdata.length,
+          groupdata.map((item, index) => (
+            <Konwscard key={index} router='/special'></Konwscard>
+          )),
+          <div className='nodata'>
+            <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} />
+          </div>
+        )}
       </div>
+      <div className='line' />
       <div className='articelist'>
-        <List
-          itemLayout='horizontal'
-          dataSource={data}
-          renderItem={item => (
-            <List.Item>
-              <List.Item.Meta
-                avatar={
-                  <Avatar src='https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png' />
-                }
-                title={<a href='https://ant.design'>{item.title}</a>}
-                description='Ant Design, a design language for background applications, is refined by Ant UED Team'
-              />
-            </List.Item>
-          )}
-        />
+        <p>最新文章推荐</p>
+        {renderShow(
+          DATA.length,
+          <List
+            itemLayout='horizontal'
+            dataSource={DATA}
+            renderItem={item => (
+              <List.Item>
+                <List.Item.Meta
+                  avatar={
+                    <Avatar src='https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png' />
+                  }
+                  title={<a href='https://ant.design'>{item.title}</a>}
+                  description='Ant Design, a design language for background applications, is refined by Ant UED Team'
+                />
+              </List.Item>
+            )}
+          />,
+          <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} />
+        )}
       </div>
     </div>
   )

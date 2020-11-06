@@ -27,7 +27,7 @@ class Dialog extends Component {
     var props = options.props || {}
 
     var childs = this.renderChildren(props, options.childrens) || ''
-    console.log(childs)
+    // console.log(childs)
     this.setState({
       ...defaultState,
       ...options,

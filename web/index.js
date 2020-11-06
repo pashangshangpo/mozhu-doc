@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom'
 import Route from './Route'
 import { HashRouter } from 'react-router-dom'
 
-import './style/reset.scss'
-import './style/index.scss'
+import '$style/reset.scss'
+import '$style/index.scss'
 
 //新添加
 import { Layout } from 'antd'
@@ -20,9 +20,13 @@ class Main extends React.Component {
           <Headertop />
           <Content
             className='site-layout'
-            style={{ padding: '0 50px', marginTop: 64 }}
+            style={{
+              padding: '0 50px',
+              marginTop: 64,
+              backgroundColor: 'white',
+            }}
           >
-            {/* <Breadcrumb style={{ margin: '16px 0' }}>
+            {/* <Breadcrumb style={{width:980, margin: '16px auto' }}>
               <Breadcrumb.Item>首页</Breadcrumb.Item>
             </Breadcrumb> */}
             <div
@@ -33,7 +37,7 @@ class Main extends React.Component {
             </div>
           </Content>
           <Footer style={{ textAlign: 'center' }}>
-            Ant Design ©2018 Created by Ant UED
+            墨竹文档 ©2020 Created by CJ前端
           </Footer>
         </Layout>
       </HashRouter>

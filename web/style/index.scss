@@ -1,6 +1,15 @@
-$bg-color: rgb(236, 236, 236);
 $main-color: white;
 $pagebg-color: rgb(240, 242, 245);
+$border-color: #ececec;
+$font-color: #969696;
+$font-darkgray: #595959;
+$gray: rgb(217, 217, 217);
+$logo: #40a08b;
+$bodyColor: #404040;
+
+body {
+  color: $bodyColor;
+}
 
 .content {
   // padding: 30px 20px;
@@ -8,9 +17,31 @@ $pagebg-color: rgb(240, 242, 245);
   min-width: 980px;
   padding-top: 20px;
   margin: auto;
-  background-color: $bg-color;
+  color: $bodyColor !important;
+  font-size: 14px;
 }
 
 .ant-layout-header {
   background-color: $main-color;
+}
+
+.ant-layout {
+  min-height: 930px;
+}
+
+.ant-btn-primary {
+  border-color: $logo;
+  background: $logo;
+}
+
+.ant-btn-background-ghost.ant-btn-primary {
+  border-color: white;
+  color: white;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  margin: 5px 0;
+  background-color: $border-color;
 }
